@@ -1,0 +1,8 @@
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('The ordered pair (3,0) is found:', 'on the y-axis', 'in the first quadrant', 'at the origin', 'on the x-axis', 'on the x-axis', 1, 1.2, 'Easy');
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('(-3, 7) is located in quadrant:', 'I', 'II', 'III', 'IV','II', 1, 1.2, 'Easy');
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('If you were playing TIC-TAC-TOE, and if it were your turn, and your opponent had marks at (0,1) and (2,3), where would you place your mark to block him?', 
+'(-1,0)', '(2,1)', '(1,2)', '(-1,2)','(1,2)', 1, 1.2, 'Easy');
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('Which of the following equations is linear?', 'x=6', 'y=x^2+5', 'y+x^3=7', 'None of the Above', 'x=6', 1, 1.2, 'Medium');
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('Which of the following is equal to a^bc for all values of a, b, and c?', 'ab^c', '(a^b)^c', 'a^bc', 'None of the Above', '(a^b)^c', 1, 1.2, 'Difficult');
+INSERT INTO SEQUOIA.QUESTION (CONTENT, OPTION1, OPTION2, OPTION3, OPTION4, CORRECTANS, CATID, PACKAGEID, DIFFICULTY) VALUES('f(x)=x+3, g(x)=|x-3|; The function f and g are defined above. What is the value of f(g(-3))?', '-6', '9', '0', '3','9', 1, 1.2, 'Difficult');
+
