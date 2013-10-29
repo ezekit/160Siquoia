@@ -54,6 +54,35 @@
 	</table>
 	</div>	
 	
+		<div>
+	<br><br>
+	<!-- SAMPLE GUYS TEST IT OUT JSLT but u need to have JSLT search google -->
+		<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+			url="jdbc:mysql://localhost/sq" user="root" password="root" />
+	
+	<sql:query dataSource="${snapshot}" var="result">
+	SELECT * from authentication;
+	</sql:query>
+	
+		<table data-role="table" width="100%" data-mode="reflow">
+			<tr>
+				<th>Emp ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
+			</tr>
+			<c:forEach var="row" items="${result.rows}">
+				<tr>
+					<td><c:out value="${row.ID}" /></td>
+					<td><c:out value="${row.USERNAME}" /></td>
+					<td><c:out value="${row.USERPASSWORD}" /></td>
+					<td><c:out value="${row.ADMIN}" /></td>
+				</tr>
+			</c:forEach>
+	</table>
+
+	</div>
+	
 </div><!-- /page -->
 
 

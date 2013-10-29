@@ -9,34 +9,7 @@
 </head>
 <body>
 
-	<div>
-	<br><br>
-	<!-- SAMPLE GUYS TEST IT OUT JSLT but u need to have JSLT search google -->
-		<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
-			url="jdbc:mysql://localhost/test" user="root" password="root" />
-	
-	<sql:query dataSource="${snapshot}" var="result">
-	SELECT * from employees;
-	</sql:query>
-	
-		<table data-role="table" width="100%" data-mode="reflow">
-			<tr>
-				<th>Emp ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Age</th>
-			</tr>
-			<c:forEach var="row" items="${result.rows}">
-				<tr>
-					<td><c:out value="${row.id}" /></td>
-					<td><c:out value="${row.first}" /></td>
-					<td><c:out value="${row.last}" /></td>
-					<td><c:out value="${row.age}" /></td>
-				</tr>
-			</c:forEach>
-	</table>
 
-	</div>
 	</div>
 </body>
 </html>
