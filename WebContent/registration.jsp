@@ -1,4 +1,3 @@
-<jsp:include page="nav.jsp"/>
 	<div data-role="content" id="page1"> 	
 	<form action="" method="post">
 		Fill in the registration form below and submit!<br> <br>

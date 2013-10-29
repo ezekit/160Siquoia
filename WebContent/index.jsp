@@ -33,27 +33,38 @@ label{
    color:#000;
    letter-spacing:-1px;
 }
+h.big{ 
+   font-family: 'SwIS Bold'; 
+   font-weight: bold; 
+   font-style: normal; 
+   font-size: 40px;
+   color:#222222;
+   letter-spacing:-1px;
+}
 </style>
 </head> 
 <body> 
 
 <!-- Start of first page -->
 <div data-role="page" id="log">
+	<jsp:include page="nav.jsp"/>
 	<jsp:include page="login.jsp"/>
-	<div data-role="footer">
-		<h4>SQ 1 Team</h4>
+	<div data-role="footer"  data-theme="c">
+		<h6>SQ 1 Team</h6>
 	</div><!-- /footer -->
 </div><!-- /page -->
 
 <!-- Start of second page -->
 <div data-role="page" id="reg">
-		<jsp:include page="registration.jsp"/>
+	<jsp:include page="nav.jsp"/>
+	<jsp:include page="registration.jsp"/>
 	</div><!-- /footer -->
 </div><!-- /page -->
 
 
 <!-- Start of third page -->
 <div data-role="page" id="acc">
+		<jsp:include page="nav.jsp"/>
 		<jsp:include page="account.jsp"/>
 	</div><!-- /footer -->
 </div><!-- /page -->

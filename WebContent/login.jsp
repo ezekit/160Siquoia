@@ -1,9 +1,8 @@
-	<jsp:include page="nav.jsp"/>
 	<div data-role="content" id="page1"> 	
 	<h2>Welcome To SiQuioa interactive quiz game!</h2>
 	Please login below
 	
-	<div data-role="fieldcontain" class="ui-hide-label"  style="width:400px">
+	<div data-role="fieldcontain" class="ui-hide-label"  style="width:60%">
 	<form action="form.php" method="post">
 		<label for="username">Username:</label>
 		<input type="text" name="username" id="username" value="" placeholder="Username"/>

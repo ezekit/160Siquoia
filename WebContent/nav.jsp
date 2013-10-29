@@ -1,6 +1,6 @@
 	<div  class="header">
 			<h class="logo">SiQuoia</h>
-		<div data-role="navbar" >
+		<div data-role="navbar">
 			<ul>
 				<li><a href="#log"  data-theme="a">Login</a></li>
 				<li><a href="play.jsp" data-theme="a" data-role="popup">Play</a></li>
