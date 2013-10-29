@@ -11,62 +11,6 @@
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/odstemplik" rel="stylesheet" type="text/css"/>
 <title>SELECT Operation</title>
-<style>
-.table-stroke thead th {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-.table-stroke tbody th,
-.table-stroke tbody td {
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-}
-.table-stripe tbody tr:nth-child(odd) td,
-.table-stripe tbody tr:nth-child(odd) th {
-  background-color: rgba(0,0,0,0.04);
-}
-/* Add stroke to the header and last item */
-.table-stripe thead th,
-.table-stripe tbody tr:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-.header {
-   background-color:#435e69;
-}
-.bodycont {
-   background-color:#c3dcbf;
-}
-h.logo{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 100px;
-   color:#ffffff;
-   letter-spacing:-4px;
-}
-label{
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 12px;
-   color:#000;
-   letter-spacing:-1px;
-}
-h.big{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 40px;
-   color:#222222;
-   letter-spacing:-1px;
-}
-a.topic{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 100px;
-   color:#000;
-   letter-spacing:-1px;
-}
-</style>
 </head>
 <body>
 
@@ -74,12 +18,13 @@ a.topic{
 	<!-- /header -->
 	<jsp:include page="nav.jsp"/>
 	<div data-role="content">	
-				<h class="big">Please choose a topic:<br></h>
-	
+	<h class="big">Please choose a topic:<br></h>
+	Select the game you may want to play or play random: <br><br>
+		
 	<div style="width:100%">	
-	<table data-role="table" width="50%"><tr>
+	<table data-role="table" width="80%"><tr>
 	<td width="30%"><a class="topic" href="">SCIENCE</a>
-	<td valign="left">
+	<td width="70%" align="left">
 	<select name="select-choice-min" id="select-choice-min" data-mini="true">
 	   <option value="standard">Math</option>
 	   <option value="rush">Physics</option>
@@ -107,7 +52,7 @@ a.topic{
 	</select> 
 	</td></td></tr>
 	</table>
-	</div>
+	</div>	
 	
 </div><!-- /page -->
 

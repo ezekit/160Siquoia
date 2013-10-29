@@ -2,11 +2,10 @@
 		<div class="bodycontent">
 		<br>
 			
-			<strong>User Account Info:</strong><br>
-			<table data-role="table" cellpadding=10 cellspacing=10><tr><td valign=top>
+			<strong>User Account Info:</strong><br><br>
+			<table data-role="table" cellpadding=5 cellspacing=5><tr><td valign=top>
 			<img src="${pageContext.request.contextPath}/images/ukn.jpg" width=90 height=90 border=2/>
 			<td valign=top>
-			<p class="para">
 			<table data-role="table">			
 			<tr><td><strong>Name:</strong><td>David Taylor</td></tr>
 			<tr><td><strong>Email:</strong><td> David.Taylor@sjsu.edu</td></tr>

@@ -11,6 +11,56 @@
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/odstemplik" rel="stylesheet" type="text/css"/>
 <style>
+.table-stroke thead th {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.table-stroke tbody th,
+.table-stroke tbody td {
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+.table-stripe tbody tr:nth-child(odd) td,
+.table-stripe tbody tr:nth-child(odd) th {
+  background-color: rgba(0,0,0,0.04);
+}
+/* Add stroke to the header and last item */
+.table-stripe thead th,
+.table-stripe tbody tr:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.ui-footer .ui-btn-inner {
+    padding: 1px !important;
+}
+
+.ui-footer .ui-btn-text {
+    font-size: 2px;
+    padding: 10px;
+}
+.footer
+{
+    background-color:#e8e5d5;
+	color: #333;
+	height:100px;
+    top: 0px;
+    left:0px;
+    font-family: 'SwIS Bold	'; 
+    font-weight: normal; 
+	font-style: normal;
+    font-size: 12px;
+    letter-spacing: 4px;
+	text-align:center;
+}
+p.small
+{
+    font-family: 'SwIS Bold'; 
+    font-weight: normal; 
+	font-style: normal;
+    font-size: 11px;
+    letter-spacing: 2px;
+	text-align:center;
+	color: #333;
+
+}
+
 .header {
    background-color:#435e69;
 }
@@ -41,6 +91,15 @@ h.big{
    color:#222222;
    letter-spacing:-1px;
 }
+a.topic{ 
+   font-family: 'SwIS Bold'; 
+   font-weight: bold; 
+   font-style: normal; 
+   font-size: 30px;
+   color:#000;
+   letter-spacing:-1px;
+}
+
 </style>
 </head> 
 <body> 
@@ -50,7 +109,14 @@ h.big{
 	<jsp:include page="nav.jsp"/>
 	<jsp:include page="login.jsp"/>
 	<div data-role="footer"  data-theme="c">
-		<h6>SQ 1 Team</h6>
+
+	<div class="footer"><br>
+	CS 160 SQ1-TEAM FALL 2013 PROJECT<br>
+	<p class="small">
+	Contact SQ1Team20013@gmail.com | facebook | google+
+	</p>
+	</div>
+
 	</div><!-- /footer -->
 </div><!-- /page -->
 
