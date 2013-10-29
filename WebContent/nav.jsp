@@ -6,6 +6,7 @@
 				<li><a href="play.jsp" data-theme="a" data-role="popup">Play</a></li>
 				<li><a href="#acc" data-theme="a">Account</a></li>
 				<li><a href="#" data-theme="a">Store</a></li>
+				<li><a href="#" data-theme="a">Leaderboard</a></li>
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /header -->
