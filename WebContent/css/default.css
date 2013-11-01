@@ -1,5 +1,6 @@
-.bodycont {
-	background-color: #c3dcbf;
+body ,td ,div {
+    font-family: 'Sorts Mill Goudy';
+   	font-weight: normal;
 }
 .playnav {
 	top: 70px;
@@ -11,18 +12,10 @@
 }
 #page1, #page2, #page3, #page4 
 {
-
 	display: none;
 }
-@font-face {
-	font-family: 'Palatino';
-	src: url('fonts/pala.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 p.logo {
-	font-family: 'Palatino';
+	font-family: 'Sorts Mill Goudy';
 	font-weight: normal;
 	font-size: 150px;
 	letter-spacing: 8px;
@@ -65,7 +58,7 @@ footer{
 }
 
 h1,h2,h3,h4,h5,h6 {
-	font-family: 'Josefin Sans';
+	font-family: 'Sorts Mill Goudy';
 	font-weight: normal;
 	font-style: normal;
 	text-decoration: none;
