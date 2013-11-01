@@ -1,143 +1,69 @@
-<%@ page language="java" contentType="text/html; charset=US-ASCII"
-    pageEncoding="US-ASCII"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> 
 	<head> 
 	<title>Page Title</title> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/red.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:regular,bold' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/odstemplik" rel="stylesheet" type="text/css"/>
-<style>
-.table-stroke thead th {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-.table-stroke tbody th,
-.table-stroke tbody td {
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-}
-.table-stripe tbody tr:nth-child(odd) td,
-.table-stripe tbody tr:nth-child(odd) th {
-  background-color: rgba(0,0,0,0.04);
-}
-/* Add stroke to the header and last item */
-.table-stripe thead th,
-.table-stripe tbody tr:last-child {
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-}
-.ui-footer .ui-btn-inner {
-    padding: 1px !important;
-}
+	<script>
+		$(document).ready(function() {
+			$(".page2, .page3, .pag4").hide();
+			$(".log").click(function() {
+				$(".page2, .page3, .pag4").hide();
+				$(".page1").show("slow");
+			});
+			$(".reg").click(function() {
+				$(".page1, .page3, .pag4").hide();
+				$(".page2").show("slow");
+			});
+			$(".acc").click(function() {
+				$(".page1, .page2, .pag4").hide();
+				$(".page3").show("slow");
+			});
 
-.ui-footer .ui-btn-text {
-    font-size: 2px;
-    padding: 10px;
-}
-.footer
-{
-    background-color:#e8e5d5;
-	color: #333;
-	height:100px;
-    top: 0px;
-    left:0px;
-    font-family: 'SwIS Bold	'; 
-    font-weight: normal; 
-	font-style: normal;
-    font-size: 12px;
-    letter-spacing: 4px;
-	text-align:center;
-}
-p.small
-{
-    font-family: 'SwIS Bold'; 
-    font-weight: normal; 
-	font-style: normal;
-    font-size: 11px;
-    letter-spacing: 2px;
-	text-align:center;
-	color: #333;
-
-}
-
-.header {
-   background-color:#435e69;
-}
-.bodycont {
-   background-color:#c3dcbf;
-}
-h.logo{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 100px;
-   color:#ffffff;
-   letter-spacing:-4px;
-}
-label{
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 12px;
-   color:#000;
-   letter-spacing:-1px;
-}
-h.big{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 40px;
-   color:#222222;
-   letter-spacing:-1px;
-}
-a.topic{ 
-   font-family: 'SwIS Bold'; 
-   font-weight: bold; 
-   font-style: normal; 
-   font-size: 30px;
-   color:#000;
-   letter-spacing:-1px;
-}
-
-</style>
+		});
+	</script>
 </head> 
 <body> 
+	<div data-role="page" data-theme="a"> 
+		<jsp:include page="nav.jsp"/>	
 
-<!-- Start of first page -->
-<div data-role="page" id="log">
-	<jsp:include page="nav.jsp"/>
-	<jsp:include page="login.jsp"/>
-	<div data-role="footer"  data-theme="c">
+<!--************************* html body -->
 
-	<div class="footer"><br>
-	CS 160 SQ1-TEAM FALL 2013 PROJECT<br>
-	<p class="small">
-	Contact SQ1Team20013@gmail.com | facebook | google+
-	</p>
+
+	<div class="page1">
+		<jsp:include page="login.jsp" />
 	</div>
 
-	</div><!-- /footer -->
-</div><!-- /page -->
+	<div class="page2">
+		<jsp:include page="registration.jsp" />
+	</div>
 
-<!-- Start of second page -->
-<div data-role="page" id="reg">
-	<jsp:include page="nav.jsp"/>
-	<jsp:include page="registration.jsp"/>
-	</div><!-- /footer -->
-</div><!-- /page -->
+	<div class="page3">
+		<jsp:include page="account.jsp" />
+	</div>
 
-
-<!-- Start of third page -->
-<div data-role="page" id="acc">
-		<jsp:include page="nav.jsp"/>
-		<jsp:include page="account.jsp"/>
-	</div><!-- /footer -->
-</div><!-- /page -->
-
-
-
-
-
+<!-- *********************** html foot -->
+	<div data-role="footer" data-theme="a">
+	<center>
+		<table>
+			<tr>
+				<td><footer>
+						<center>[ CS 160 SQ1-TEAM FALL 2013 PROJECT Contact
+							SQ1Team20013@gmail.com | facebook | google+ ]
+					</footer>
+					</center></td>
+			</tr>
+		</table>
+	</center>
+	
+	</div><!-- end of footer -->
+<div><!-- end of page -->
+</div>
 </body>
 </html>

@@ -1,7 +1,8 @@
-	<div data-role="content" id="page1"> 	
+<div data-role="content">
+
 	<form action="" method="post">
 		Fill in the registration form below and submit!<br> <br>
-		<table data-role="table" width="100%">
+		<table width="70%">
 			<tr>
 				<td width="10%"><label for="basic">Full Name:</label></td>
 				<td width="90%"><input type="text" name="name" id="basic"

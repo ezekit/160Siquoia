@@ -14,14 +14,14 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="/usr/share/java/mysql-connector-java-5.1.16.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/jstl-impl-1.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/Siquoia/WebContent/WEB-INF/lib/servlet-api-3.0-alpha-1.jar"/>
 	<classpathentry kind="lib" path="/usr/share/java/mysql.jar"/>
 	<classpathentry kind="lib" path="/usr/share/java/mysql-connector-java.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/jstl-impl-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/takeitez/git/160Siquoia/WebContent/WEB-INF/lib/servlet-api-3.0-alpha-1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
