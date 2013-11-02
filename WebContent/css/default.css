@@ -10,6 +10,9 @@ body ,td ,div {
 	position: relative;
 	width: 200px;
 }
+.center {
+
+}
 #page1, #page2, #page3, #page4 
 {
 	display: none;
