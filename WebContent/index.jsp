@@ -30,6 +30,10 @@
 				$(".page1, .page2, .page3").hide();
 				$(".page4").show("slow");
 			});
+			$("#pquiz").click(function() {
+				$(".page1, .page2, .page3").hide();
+				$(".page4").show("slow");
+			});
 		});
 	</script>
 </head> 
