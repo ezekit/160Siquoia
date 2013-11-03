@@ -2,8 +2,8 @@
 <html> 
 	<head> 
 	<title>Page Title</title> 
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/default.css" />
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/red.min.css" />
+	<link rel="stylesheet" href="css/default.css" />
+	<link rel="stylesheet" href="css/red.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
@@ -13,26 +13,18 @@
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css"/>
 	<script>
 		$(document).ready(function() {
-			$(".page2, .page3, .page4").hide();
-			$("#log").click(function() {
-				$(".page2, .page3, .page4").hide();
+			$(".page2, .page3, .pag4").hide();
+			$(".log").click(function() {
+				$(".page2, .page3, .pag4").hide();
 				$(".page1").show("slow");
 			});
-			$("#reg").click(function() {
-				$(".page1, .page3, .page4").hide();
+			$(".reg").click(function() {
+				$(".page1, .page3, .pag4").hide();
 				$(".page2").show("slow");
 			});
-			$("#acc").click(function() {
-				$(".page1, .page2, .page4").hide();
+			$(".acc").click(function() {
+				$(".page1, .page2, .pag4").hide();
 				$(".page3").show("slow");
-			});
-			$("#math").click(function() {
-				$(".page1, .page2, .page3").hide();
-				$(".page4").show("slow");
-			});
-			$("random").click(function() {
-				$(".page1, .page2, .page3").hide();
-				$(".page5").show("slow");
 			});
 
 		});
@@ -57,12 +49,6 @@
 		<jsp:include page="account.jsp" />
 	</div>
 
-
-	<div class="page4">
-		<jsp:include page="pmath.jsp" />
-	</div>
-	
-	
 <!-- *********************** html foot -->
 	<div data-role="footer" data-theme="a">
 	<center>

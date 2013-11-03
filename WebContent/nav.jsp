@@ -20,7 +20,7 @@
 <div class="playnav" data-role="popup" id="play" data-theme="none">
 	<div >
 		<ul data-role="listview">
-			<li><a class="submenu" href="#" data-theme="a" id="math">Math</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="pmath">Math</a></li>
 			<li><a class="submenu" href="#" data-theme="a" id="physics">Physics</a></li>
 			<li><a class="submenu" href="#" data-theme="a" id="religion">Religion</a></li>
 			<li><a class="submenu" href="#" data-theme="a" id="religion">Random</a></li>
