@@ -14,15 +14,15 @@
 	<script>
 		$(document).ready(function() {
 			$(".page2, .page3, .page4").hide();
-			$(".log").click(function() {
+			$("#log").click(function() {
 				$(".page2, .page3, .page4").hide();
 				$(".page1").show("slow");
 			});
-			$(".reg").click(function() {
+			$("#reg").click(function() {
 				$(".page1, .page3, .page4").hide();
 				$(".page2").show("slow");
 			});
-			$(".acc").click(function() {
+			$("#acc").click(function() {
 				$(".page1, .page2, .page4").hide();
 				$(".page3").show("slow");
 			});
