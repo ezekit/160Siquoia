@@ -30,6 +30,10 @@
 				$(".page1, .page2, .page3").hide();
 				$(".page4").show("slow");
 			});
+			$("random").click(function() {
+				$(".page1, .page2, .page3").hide();
+				$(".page5").show("slow");
+			});
 
 		});
 	</script>
