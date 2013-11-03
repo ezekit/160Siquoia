@@ -3,9 +3,9 @@
 	<p class="logo">Siquoia</p>
 	<div data-role="navbar" id="navigation">
 		<ul>
-			<li><a href="" data-theme="b" class="log">Login</a></li>
+			<li><a href="" data-theme="b" id="log">Login</a></li>
 			<li><a href="#play" data-theme="b" data-rel="popup">Play</a></li>
-			<li><a href="#" data-theme="b" class="acc">Account</a></li>
+			<li><a href="#" data-theme="b" id="acc">Account</a></li>
 			<li><a href="#" data-theme="b">Store</a></li>
 			<li><a href="#" data-theme="b">Leaderboard</a></li>
 		</ul>
@@ -20,9 +20,10 @@
 <div class="playnav" data-role="popup" id="play" data-theme="none">
 	<div >
 		<ul data-role="listview">
-			<li><a class="submenu" href="#" data-theme="a">Math</a></li>
-			<li><a class="submenu" href="#" data-theme="a">Physics</a></li>
-			<li><a class="submenu" href="#" data-theme="a">Religion</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="math">Math</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="physics">Physics</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="religion">Religion</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="religion">Random</a></li>
 		</ul>
 	</div>
 

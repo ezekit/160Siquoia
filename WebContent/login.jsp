@@ -23,7 +23,7 @@
 			</table>
 		</form>
 
-		If your a new user click here to <a href="#reg" class="reg">register!</a><br>
+		If your a new user click here to <a href="#reg" id="reg">register!</a><br>
 		<br>
 	</div>
 
