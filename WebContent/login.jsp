@@ -16,8 +16,8 @@
 						type="password" name="username" id="username" value=""
 						placeholder="Password" />
 						<div style="width: 200px">
-							<a href="#popChoice" data-role="button" data-theme="b"
-								data-rel="popup">Submit</a>
+							<a href="#popChoice" data-theme="b" data-rel="popup"><button>Submit</button>
+							</a>
 						</div></td>
 				</tr>
 			</table>

@@ -53,8 +53,8 @@
 					<table width="400">
 						<tr>	
 						*Submit to login
-						    <td><a href="" data-role="button" data-theme="a">Cancel</a></td>
-							<td><a href="" data-role="button" data-theme="a">Submit</a></td>
+						    <td><a href="" data-theme="a"><button>Cancel</button></a></td>
+							<td><a href="" data-theme="a"><button>Submit</button></a></td>
 						</tr>
 					</table>
 				</td>
