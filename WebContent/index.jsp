@@ -56,7 +56,6 @@
 		<jsp:include page="pmath.jsp" />
 	</div>
 
-
 <!-- *********************** html foot -->
 	<div data-role="footer" data-theme="a">
 	<center>
