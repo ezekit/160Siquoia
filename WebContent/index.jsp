@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC test3"-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> 
 	<head> 
 	<title>Page Title</title> 
@@ -26,11 +26,6 @@
 				$(".page1, .page2, .pag4").hide();
 				$(".page3").show("slow");
 			});
-			$(".led").click(function() {
-				$(".page1, .page2, .pag3").hide();
-				$(".page4").show("slow");
-			});
-
 
 		});
 	</script>
