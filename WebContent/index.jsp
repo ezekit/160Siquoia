@@ -26,6 +26,11 @@
 				$(".page1, .page2, .pag4").hide();
 				$(".page3").show("slow");
 			});
+			$(".led").click(function() {
+				$(".page1, .page2, .pag3").hide();
+				$(".page4").show("slow");
+			});
+
 
 		});
 	</script>
