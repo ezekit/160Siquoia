@@ -26,7 +26,10 @@
 				$(".page1, .page2, .pag4").hide();
 				$(".page3").show("slow");
 			});
-
+			$("#pmath").click(function() {
+				$(".page1, .page2, .pag4").hide();
+				$(".page3").show("slow");
+			});
 		});
 	</script>
 </head> 
@@ -48,6 +51,11 @@
 	<div class="page3">
 		<jsp:include page="account.jsp" />
 	</div>
+
+	<div class="page3">
+		<jsp:include page="pmath.jsp" />
+	</div>
+
 
 <!-- *********************** html foot -->
 	<div data-role="footer" data-theme="a">

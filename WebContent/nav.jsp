@@ -23,7 +23,7 @@
 			<li><a class="submenu" href="#" data-theme="a" id="pmath">Math</a></li>
 			<li><a class="submenu" href="#" data-theme="a" id="physics">Physics</a></li>
 			<li><a class="submenu" href="#" data-theme="a" id="religion">Religion</a></li>
-			<li><a class="submenu" href="#" data-theme="a" id="religion">Random</a></li>
+			<li><a class="submenu" href="#" data-theme="a" id="random">Random</a></li>
 		</ul>
 	</div>
 
