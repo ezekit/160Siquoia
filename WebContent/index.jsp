@@ -13,22 +13,22 @@
 	<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css"/>
 	<script>
 		$(document).ready(function() {
-			$(".page2, .page3, .pag4").hide();
+			$(".page2, .page3, .page4").hide();
 			$(".log").click(function() {
-				$(".page2, .page3, .pag4").hide();
+				$(".page2, .page3, .page4").hide();
 				$(".page1").show("slow");
 			});
 			$(".reg").click(function() {
-				$(".page1, .page3, .pag4").hide();
+				$(".page1, .page3, .page4").hide();
 				$(".page2").show("slow");
 			});
 			$(".acc").click(function() {
-				$(".page1, .page2, .pag4").hide();
+				$(".page1, .page2, .page4").hide();
 				$(".page3").show("slow");
 			});
 			$("#pmath").click(function() {
-				$(".page1, .page2, .pag4").hide();
-				$(".page3").show("slow");
+				$(".page1, .page2, .page3").hide();
+				$(".page4").show("slow");
 			});
 		});
 	</script>
@@ -52,7 +52,7 @@
 		<jsp:include page="account.jsp" />
 	</div>
 
-	<div class="page3">
+	<div class="page4">
 		<jsp:include page="pmath.jsp" />
 	</div>
 
