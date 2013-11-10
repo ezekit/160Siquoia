@@ -1,6 +1,6 @@
 <div data-role="content">
 
-	<form action="" method="post">
+	<form action="registration" method="post">
 		Fill in the registration form below and submit!<br> <br>
 		<table width="70%">
 			<tr>
@@ -12,10 +12,10 @@
 				<td>Gender</td>
 				<td>
 					<fieldset data-role="controlgroup" style="width: 200px">
-						<input type="radio" name="radio-choice" id="radio-choice-1"
+						<input type="radio" name="gender" id="radio-choice-1"
 							value="choice-1" checked="checked" /> <label
 							for="radio-choice-1">Male</label> <input type="radio"
-							name="radio-choice" id="radio-choice-2" value="choice-2" /> <label
+							name="gender" id="radio-choice-2" value="choice-2" /> <label
 							for="radio-choice-2">Female</label>
 					</fieldset>
 				</td>
@@ -26,16 +26,16 @@
 			</tr>
 			<tr>
 				<td><label for="basic">Email:</label></td>
-				<td><input type="text" name="name" id="basic" data-mini="true" /></td>
+				<td><input type="text" name="email_name" id="basic" data-mini="true" /></td>
 			</tr>
 			<tr>
 				<td><label for="basic">Password:</label></td>
-				<td><input type="password" name="name" id="basic"
+				<td><input type="password" name="pwd_name" id="basic"
 					data-mini="true" /></td>
 			</tr>
 			<tr>
 				<td><label for="basic">Confirm Password:</label></td>
-				<td><input type="password" name="name" id="basic"
+				<td><input type="password" name="confirm_pw" id="basic"
 					data-mini="true" /></td>
 			</tr>
 			<tr>
@@ -52,9 +52,9 @@
 				<td>
 					<table width="400">
 						<tr>	
-						*Submit to login
-						    <td><a href="" data-theme="a"><button>Cancel</button></a></td>
-							<td><a href="" data-theme="a"><button>Submit</button></a></td>
+						*Submit to login						   
+							<td><input type = "submit"> Submit </td>
+							 <td> </td>
 						</tr>
 					</table>
 				</td>
