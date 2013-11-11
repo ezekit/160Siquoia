@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class registration
@@ -22,14 +23,7 @@ public class registration extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-	}
-
+    
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,16 +36,29 @@ public class registration extends HttpServlet {
 		String newpw = request.getParameter("pwd_name");
 		String confirmPw = request.getParameter("confirm_pw");
 		
-		
-		String msg;
-		if(!confirmPw.equals(newpw))
-			msg = "Please make sure you type in the same password to confirm!";
-		else 
-			msg = "Your name  is " + newusr + "email is:" + newemail;
-		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<h3>" +msg+"</h3>");		
+
+		try {
+
+			UserBean user = new UserBean();
+			user.setName(request.getParameter("uname"));
+			user.setPassword(request.getParameter("upass"));
+
+			user = UserDAO.login(user);
+
+			if (user.isValid()) {
+
+				HttpSession session = request.getSession(true);
+				session.setAttribute("currentSessionUser", user);
+				response.sendRedirect("userLog.jsp"); // logged-in page
+			}
+
+			else
+				response.sendRedirect("invalidLog.jsp"); // error page
+		}
+
+		catch (Throwable theException) {
+			System.out.println(theException);
+		}
 		
 	}
 

@@ -27,7 +27,8 @@ public class login extends HttpServlet {
 		try {
 
 			UserBean user = new UserBean();
-			user.setName(request.getParameter("uname"));
+			//Sets email to UserBean.java for comparison/verification in UserDAO.java
+			user.setEmail(request.getParameter("umail"));
 			user.setPassword(request.getParameter("upass"));
 
 			user = UserDAO.login(user);

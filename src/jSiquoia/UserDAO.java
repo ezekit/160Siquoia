@@ -14,9 +14,16 @@ public class UserDAO {
 		String password = bean.getPassword();
 		String email = bean.getEmail();
 
-		String searchQuery = "select * from users where password='" + password
-				+ "'" + "' AND email='" + email + "';";
-
+	    String searchQuery =
+	               "select * from users where email='"
+	                        + email
+	                        + "' AND password='"
+	                        + password
+	                        + "'";
+	    
+	    
+		System.out.print(searchQuery);
+		
 		try {
 			// connect to DB
 			currentCon = ConnectionManager.getConnection();

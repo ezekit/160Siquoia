@@ -20,7 +20,7 @@
          <center>
             <% UserBean currentUser = (UserBean (session.getAttribute("currentSessionUser"));%>
 			
-            Welcome <%= currentUser.getFirstName() + " " + currentUser.getLastName() %>
+            Welcome <%= currentUser.getName() + " " + currentUser.getEmail() %>
          </center>
 
       </body>

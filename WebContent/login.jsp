@@ -7,8 +7,8 @@
 		<form  action="login">
 			<table width="70%">
 				<tr>
-					<td><label for="uname">Username:</label> <input type="text"
-						name="uname" id="uname" value="" placeholder="Username" />
+					<td><label for="umail">Username:</label> <input type="text"
+						name=""umail" id=""umail" value="" placeholder="Email" />
 					</td>
 				</tr>
 				<tr>

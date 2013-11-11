@@ -24,7 +24,7 @@ public class ConnectionManager {
 			String url = "jdbc:odbc:" + "DataSource";
 			// assuming "DataSource" is your DataSource name
 
-			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			Class.forName("com.mysql.jdbc.Driver");
 
 			try {
 				con = DriverManager.getConnection(url, USER, PASS);
