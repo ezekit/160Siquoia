@@ -1,6 +1,6 @@
 package jSiquoia;
 
-public class UserBean {
+public class UserBean implements java.io.Serializable {
 
 	private String name;
 	private String email;
