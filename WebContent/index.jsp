@@ -30,10 +30,7 @@
 				$(".page1, .page2, .page3").hide();
 				$(".page4").show("slow");
 			});
-			$("#pquiz").click(function() {
-				$(".page1, .page2, .page3").hide();
-				$(".page4").show("slow");
-			});
+
 		});
 	</script>
 </head> 
@@ -57,10 +54,6 @@
 	</div>
 
 	<div class="page4">
-		<jsp:include page="pmath.jsp" />
-	</div>
-	
-	<div class="page5">
 		<jsp:include page="pmath.jsp" />
 	</div>
 
