@@ -110,7 +110,7 @@ public class UserDAO {
 		int token = bean.getToken();
 		int accesslevel = bean.getLevel();
 
-		
+		//SQL - INSERTS values to database user table
 		String sql = "insert into user (name, password, email, token, accesslevel)"
 				+ " values('" + name + "','" + pass + "','"
 				+ email + "'," + token + "," + accesslevel + ")";
