@@ -2,6 +2,9 @@ package jSiquoia;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -29,37 +32,65 @@ public class registration extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		String newusr= request.getParameter("name");
-		String newgender = request.getParameter("gender");
-		String newemail = request.getParameter("email_name");
-		String newpw = request.getParameter("pwd_name");
-		String confirmPw = request.getParameter("confirm_pw");
-		
+		String msg;
 
 		try {
 
-			UserBean user = new UserBean();
-			user.setEmail(request.getParameter("umail"));
-			user.setPassword(request.getParameter("upass"));
+			
+			String newusr= request.getParameter("name");
+			String newemail = request.getParameter("email_name");
+			String newpw = request.getParameter("pwd_name");
+			String confirmPw = request.getParameter("confirm_pw");
 
-			user = UserDAO.login(user);
+			UserBean user = new UserBean();
+			user.setName(newusr);
+			user.setEmail(newemail);
+			// default values for user 100 siquoia tokens and level 1 accesslevel
+			// user (0 for DBA)
+			user.setToken(100);
+			user.setLevel(1);
+			//DATE
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			Date date = new Date();
+			String curr_date = dateFormat.format(date).toString();
+			user.setDate(curr_date);
+			
+			if(newpw.equals(confirmPw))
+			{
+				user.setPassword(newpw);
+				msg = "Account Successfully Created";			
+			}
+			else
+				msg = "Password are not the same";	
+			
+
+			user = UserDAO.registration(user);
 
 			if (user.isValid()) {
-
 				HttpSession session = request.getSession(true);
 				session.setAttribute("currentSessionUser", user);
-				response.sendRedirect("userLog.jsp"); // logged-in page
+				//response.sendRedirect("errorpage.jsp"); // 
 			}
 
 			else
-				response.sendRedirect("invalidLog.jsp"); // error page
+				; // error page
+			
+			
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+			out.println("<h3>" +msg+"</h3>");	
+			
+			
 		}
 
 		catch (Throwable theException) {
 			System.out.println(theException);
 		}
 		
+
 	}
+	
+	
+	
 
 }

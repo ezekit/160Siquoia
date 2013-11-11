@@ -9,18 +9,6 @@
 					data-mini="true" /></td>
 			</tr>
 			<tr>
-				<td>Gender</td>
-				<td>
-					<fieldset data-role="controlgroup" style="width: 200px">
-						<input type="radio" name="gender" id="radio-choice-1"
-							value="choice-1" checked="checked" /> <label
-							for="radio-choice-1">Male</label> <input type="radio"
-							name="gender" id="radio-choice-2" value="choice-2" /> <label
-							for="radio-choice-2">Female</label>
-					</fieldset>
-				</td>
-			</tr>
-			<tr>
 				<td></td>
 				<td>*Email will be used for your username login</td>
 			</tr>
