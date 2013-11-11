@@ -4,19 +4,19 @@
 	Please login below
 
 	<div data-role="fieldcontain" class="ui-hide-label" style="width: 60%">
-		<form action="form.php" method="post">
+		<form  action="login">
 			<table width="70%">
 				<tr>
-					<td><label for="username">Username:</label> <input type="text"
-						name="username" id="username" value="" placeholder="Username" />
+					<td><label for="uname">Username:</label> <input type="text"
+						name="uname" id="uname" value="" placeholder="Username" />
 					</td>
 				</tr>
 				<tr>
-					<td><label for="username">Password:</label> <input
-						type="password" name="username" id="username" value=""
+					<td><label for="upass">Password:</label> <input
+						type="password" name="upass" id="upass" value=""
 						placeholder="Password" />
 						<div style="width: 200px">
-							<a href="#popChoice" data-theme="b" data-rel="popup"><button>Submit</button>
+							<a href="#popChoice" data-theme="b" data-rel="popup"><input type="submit" value="submit">
 							</a>
 						</div></td>
 				</tr>
