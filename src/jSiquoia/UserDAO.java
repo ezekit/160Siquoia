@@ -8,8 +8,9 @@ import java.text.SimpleDateFormat;
 
 
 /**
- * GETTTTTTTERSSS AND SETTERS ONLY DONT ADD FUNCTIONALITY HERE 
- * MAKE A SERVLET FOR FUNCTIONALITY
+ * GETTERS AND SETTERS ONLY DONT ADD FUNCTIONALITY HERE 
+ * MAKE A SERVLET FOR FUNCTIONALITY HERE IS FOR DB ONLY
+ * 
  * @author takeitez
  *
  */
@@ -24,23 +25,27 @@ public class UserDAO {
 	 * @return bean object for login
 	 */
 	public static UserBean login(UserBean bean) {
-
-		// preparing some objects for connection
-
+		
+		//The passed object bean from login.java is used bellow to set to temp strings
 		String password = bean.getPassword();
 		String email = bean.getEmail();
 
+		//A SQL STATEMENT FOR SELECTING A ROW WITH THE VALUE OF THE PASSED PARAMETER (say email = test@test.edu)
 		String searchQuery = "select * from user where email='" + email
 				+ "' AND password='" + password + "'";
-
-		// FOR DEBUGGIN ONLY TO SEE IN ECLIPSE WHEN SUBMITTED
+		//FOR DEBUGGIN ONLY TO SEE what the hecks happening in ECLIPSE CONSOLE WHEN SUBMITTED
 		System.out.print(searchQuery);
 
+
+		
 		try {
-			// connect to DB
+			// connect to DB MYSQL
 			currentCon = ConnectionManager.getConnection();
 			stmt = currentCon.createStatement();
+			//executes the query from the string searchQuery
 			rs = stmt.executeQuery(searchQuery);
+			//boolean row query from stmt.executeQuery(searchQuery); works then should be true meaning 
+			//there it is found on db
 			boolean row = rs.next();
 
 			// if user does not exist set the isValid variable to false

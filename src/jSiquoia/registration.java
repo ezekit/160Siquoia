@@ -15,6 +15,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class registration
+ * Handles registration form when one submits
  */
 public class registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -36,21 +37,27 @@ public class registration extends HttpServlet {
 
 		try {
 
-			
+			//GETS the values of the textfield, button ...etc of registration.jsp form
 			String newusr= request.getParameter("name");
 			String newemail = request.getParameter("email_name");
 			String newpw = request.getParameter("pwd_name");
 			String confirmPw = request.getParameter("confirm_pw");
 
+			//Instantiates new javabean object
 			UserBean user = new UserBean();
+			//sets each parameter to a value from above
 			user.setName(newusr);
 			user.setEmail(newemail);
 			// default values for user 100 siquoia tokens and level 1 accesslevel
-			// user (0 for DBA)
+			// user (0 for DBA) //token and level should be on DATABASE DEFAULT SO WE SHOULDNT
+			// INCLUDE IT HERE BUT DOING SO FOR EXAMPLE... if u dont get what i just said
+			// dont worry just know that this sets the token value to the object userbean java
 			user.setToken(100);
 			user.setLevel(1);
 			//DATE IS SET ON DATABASE MYSQL AUTOMATICALLY USING TRIGGER DONT SET IT HERE
 			
+			
+			//if password doesnt equal confirmation password
 			if(newpw.equals(confirmPw))
 			{
 				user.setPassword(newpw);
@@ -60,6 +67,7 @@ public class registration extends HttpServlet {
 				msg = "Password are not the same";	
 			
 
+			//UserDAO (DATA ACCESS OBJECT)  validates the inputs from the GET note * the .registration
 			user = UserDAO.registration(user);
 
 			if (user.isValid()) {
