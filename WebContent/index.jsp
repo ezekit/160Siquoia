@@ -37,7 +37,6 @@
 				$('#welcometext').load('userLog.jsp');});
 
 			$('#sub form').submit(function(){
-
 			      // gather the form data
 			      var data=$(this).serialize();
 			      // post data
@@ -46,14 +45,13 @@
 			                  $('#welcometext').html( returnData);
 			      });
 			      return false; // stops browser from doing default submit process
-			});
-			
- 
+			});	
 		});
 		
 	</script>
 </head> 
 <body> 
+
 	<div data-role="page" data-theme="a"> 
 		<jsp:include page="nav.jsp"/>	
 
