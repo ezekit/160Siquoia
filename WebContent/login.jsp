@@ -8,13 +8,12 @@
 			<table width="70%">
 				<tr>
 					<td><label for="umail">Username:</label> <input type="text"
-						name=""umail" id=""umail" value="" placeholder="Email" />
+						name="umail" id="umail" value="" placeholder="Email" />
 					</td>
 				</tr>
 				<tr>
 					<td><label for="upass">Password:</label> <input
-						type="password" name="upass" id="upass" value=""
-						placeholder="Password" />
+						type="password" name="upass" id="upass" value="" placeholder="Password" />
 						<div style="width: 200px">
 							<input type="submit" value="submit">
 						</div></td>

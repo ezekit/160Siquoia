@@ -12,15 +12,13 @@
       <head>
          <meta http-equiv="Content-Type" 
             content="text/html; charset=windows-1256">
-         <title>   User Logged Successfully   </title>
+         <title> </title>
       </head>
 	
       <body>
-
+<font color="#ffffff">User Logged Successfully </font> 
          <center>
-            <% UserBean currentUser = (UserBean (session.getAttribute("currentSessionUser"));%>
-			
-            Welcome <%= currentUser.getName() + " " + currentUser.getEmail() %>
+ 
          </center>
 
       </body>

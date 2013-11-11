@@ -40,7 +40,7 @@ public class registration extends HttpServlet {
 		try {
 
 			UserBean user = new UserBean();
-			user.setName(request.getParameter("uname"));
+			user.setEmail(request.getParameter("umail"));
 			user.setPassword(request.getParameter("upass"));
 
 			user = UserDAO.login(user);
