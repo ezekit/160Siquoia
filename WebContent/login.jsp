@@ -1,21 +1,21 @@
-
 <div data-role="content">
 	<h2>Welcome To SiQuioa interactive quiz game!</h2>
-	Please login below
+	<div id="welcometext">Welcome Guest! Please login below </div>
 
-	<div data-role="fieldcontain" class="ui-hide-label" style="width: 60%">
-		<form  action="login">
+	<div data-role="fieldcontain" class="ui-hide-label" style="width: 60%"  id="sub">
+		<form action="login">
 			<table width="70%">
 				<tr>
 					<td><label for="umail">Username:</label> <input type="text"
-						name="umail" id="umail" value="" placeholder="Email" />
-					</td>
+						name="umail" id="umail" value="" placeholder="Email" /></td>
 				</tr>
 				<tr>
 					<td><label for="upass">Password:</label> <input
-						type="password" name="upass" id="upass" value="" placeholder="Password" />
+						type="password" name="upass" id="upass" value=""
+						placeholder="Password" />
 						<div style="width: 200px">
 							<input type="submit" value="submit">
+
 						</div></td>
 				</tr>
 			</table>
@@ -26,3 +26,4 @@
 	</div>
 
 </div>
+

@@ -14,8 +14,7 @@
 </head>
 
 <body>
-	<center>Sorry, you are not a registered user! Please sign up
-		first</center>
+Sorry, you are not a registered user! Please sign up first
 </body>
 
 </html>

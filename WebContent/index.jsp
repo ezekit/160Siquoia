@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/red.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:regular,bold' rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css' />
@@ -30,8 +31,26 @@
 				$(".page1, .page2, .page3").hide();
 				$(".page4").show("slow");
 			});
+			
 
+			$('#222').click(function() {
+				$('#welcometext').load('userLog.jsp');});
+
+			$('#sub form').submit(function(){
+
+			      // gather the form data
+			      var data=$(this).serialize();
+			      // post data
+			      $.get('login', data , function(returnData){
+			                  // insert returned html 
+			                  $('#welcometext').html( returnData);
+			      });
+			      return false; // stops browser from doing default submit process
+			});
+			
+ 
 		});
+		
 	</script>
 </head> 
 <body> 
@@ -41,7 +60,7 @@
 <!--************************* html body -->
 
 
-	<div class="page1">
+	<div class="page1" id="body">
 		<jsp:include page="login.jsp" />
 	</div>
 
