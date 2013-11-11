@@ -5,6 +5,14 @@ import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
+
+
+/**
+ * GETTTTTTTERSSS AND SETTERS ONLY DONT ADD FUNCTIONALITY HERE 
+ * MAKE A SERVLET FOR FUNCTIONALITY
+ * @author takeitez
+ *
+ */
 public class UserDAO {
 	static Connection currentCon = null;
 	static ResultSet rs = null;
@@ -101,19 +109,19 @@ public class UserDAO {
 		String email = bean.getEmail();
 		int token = bean.getToken();
 		int accesslevel = bean.getLevel();
-		String curr_date = bean.getDate();
 
 		
-		String sql = "insert into user values('" + name + "','" + pass + "','"
-				+ email + "'," + token + "," + accesslevel + "," + curr_date + ")";
+		String sql = "insert into user (name, password, email, token, accesslevel)"
+				+ " values('" + name + "','" + pass + "','"
+				+ email + "'," + token + "," + accesslevel + ")";
 
 		currentCon = ConnectionManager.getConnection();
 		try {
 			stmt = currentCon.createStatement();
-			rs = stmt.executeQuery(sql);
+			stmt.executeUpdate(sql);
 			bean.setValid(true);
 			//for DEBUGGIN
-			printResultSetfromStudents(rs);
+			//printResultSetfromStudents(rs);
 			
 		} catch (SQLException e) {
 			bean.setValid(false);

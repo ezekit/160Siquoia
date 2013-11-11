@@ -49,11 +49,7 @@ public class registration extends HttpServlet {
 			// user (0 for DBA)
 			user.setToken(100);
 			user.setLevel(1);
-			//DATE
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-			Date date = new Date();
-			String curr_date = dateFormat.format(date).toString();
-			user.setDate(curr_date);
+			//DATE IS SET ON DATABASE MYSQL AUTOMATICALLY USING TRIGGER DONT SET IT HERE
 			
 			if(newpw.equals(confirmPw))
 			{
@@ -78,7 +74,7 @@ public class registration extends HttpServlet {
 			
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
-			out.println("<h3>" +msg+"</h3>");	
+			out.println("<font color=#fff size=100px>" +msg+"</font>");	
 			
 			
 		}
