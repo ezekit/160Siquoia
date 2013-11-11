@@ -21,13 +21,13 @@ public class ConnectionManager {
 
 	public static Connection getConnection() {
 		try {
-			String url = "jdbc:odbc:" + "DataSource";
+
 			// assuming "DataSource" is your DataSource name
 
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName(JDBC_DRIVER);
 
 			try {
-				con = DriverManager.getConnection(url, USER, PASS);
+				con = DriverManager.getConnection(DB_URL, USER, PASS);
 			}
 
 			catch (SQLException ex) {
