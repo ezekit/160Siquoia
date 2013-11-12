@@ -3,11 +3,11 @@
 	<p class="logo">Siquoia</p>
 	<div data-role="navbar" id="navigation">
 		<ul>
-			<li><a href="" data-theme="b" id="log">Login</a></li>
+			<li><a href="" data-theme="b"  id="log">Login</a></li>
 			<li><a href="#play" data-theme="b" data-rel="popup">Play</a></li>
 			<li><a href="#" data-theme="b" id="acc">Account</a></li>
 			<li><a href="#" data-theme="b">Store</a></li>
-			<li><a href="#" data-theme="b">Leaderboard</a></li>
+			<li><a href="#" data-theme="b" id="leaderboard">Leaderboard</a></li>
 		</ul>
 	</div>
 	<!-- /navbar -->

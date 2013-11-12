@@ -14,23 +14,28 @@
 <link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/swis-bold" rel="stylesheet" type="text/css" />
 <script>
 	$(document).ready(function() {
-		$(".page2, .page3, .page4").hide();
+		$(".page2, .page3, .page4, .page5").hide();
 		$("#log").click(function() {
-			$(".page2, .page3, .page4").hide();
+			$(".page2, .page3, .page4, .page5").hide();
 			$(".page1").show("slow");
 		});
 		$("#reg").click(function() {
-			$(".page1, .page3, .page4").hide();
+			$(".page1, .page3, .page4, .page5").hide();
 			$(".page2").show("slow");
 		});
 		$("#acc").click(function() {
-			$(".page1, .page2, .page4").hide();
+			$(".page1, .page2, .page4, .page5").hide();
 			$(".page3").show("slow");
 		});
 		$("#pmath").click(function() {
-			$(".page1, .page2, .page3").hide();
+			$(".page1, .page2, .page3, .page5").hide();
 			$(".page4").show("slow");
 		});
+		$("#leaderboard").click(function() {
+			$(".page1, .page2, .page3, .page4").hide();
+			$(".page5").show("slow");
+		});
+		
 
 		$('#logindiv form').submit(function() {
 			// gather the form data
@@ -41,35 +46,33 @@
 				$('#welcometext').html(returnData);
 			});
 			return false; // stops browser from doing default submit process
+			 clearForm();
 		});
 
+	
 		$('#regisdiv form').submit(function() {
-			var data = $(this).serialize();
-			$.post('registration', data, function(returnData) {
-			}).done(function(returnData) {
-				if (returnData == 1) {
-					$(".page1, .page2, .page4").hide();
-					$(".page3").show("slow");
-					 clearForm();
-				} else {
-				    $('#regerror').html(returnData).fadeIn( "slow" );
-					 clearForm();
-				}
-
+				var data = $(this).serialize();
+				$.post('registration', data, function(returnData) {
+				}).done(function(returnData) {
+					if (returnData == 1) {
+						$(".page1, .page2, .page4").hide();
+						$(".page3").show("slow");
+						clearForm();
+					} else {
+						$('#regerror').html(returnData).fadeIn("slow");
+						clearForm();
+					}
+				});
+				return false;
 			});
-
-			return false;
-		});
-
+	
 		
-		function clearForm()
-		{ 
-		    $(':input','#regform')
-		    .not(':button, :submit, :reset')
-		    .val('');  
+		function clearForm() {
+			$(':input', '#regform').not(':button, :submit, :reset').val('');
 		};
 		
 		
+
 	});
 </script>
 </head>
@@ -96,6 +99,13 @@
 		<div class="page4">
 			<jsp:include page="pmath.jsp" />
 		</div>
+		
+		<div class="page5">
+			<jsp:include page="leaderboard.jsp" />
+		</div>
+		
+		
+		
 
 		<!-- *********************** html foot -->
 		<div data-role="footer" data-theme="a">

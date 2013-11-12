@@ -67,8 +67,7 @@ public class UserDAO {
 		}
 
 		catch (Exception ex) {
-			System.out.println("Log In failed: An Exception has occurred! "
-					+ ex);
+			System.out.println("Log In failed: An Exception has occurred! " + ex);
 		}
 
 		// some exception handling
@@ -124,7 +123,6 @@ public class UserDAO {
 	      int token = rs.getInt("token"); 
 	      int acl = rs.getInt("accesslevel");
 	      String date =  rs.getDate("login_date").toString();
-
 	      System.out.println("name:" + name + " Pw:" + pw + " Email:" + em + " tok:" + token + " level:" + acl + " date:" + date); 
 	   }
 	}
