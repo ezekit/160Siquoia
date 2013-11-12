@@ -45,15 +45,16 @@
 		});
 
 		$('#regisdiv form').submit(function() {
-
 			var data = $(this).serialize();
 			$.post('registration', data, function(returnData) {
 			}).done(function(returnData) {
 				if (returnData == 1) {
 					$(".page1, .page2, .page4").hide();
 					$(".page3").show("slow");
+					 clearForm();
 				} else {
 				    $('#regerror').html(returnData).fadeIn( "slow" );
+					 clearForm();
 				}
 
 			});
@@ -61,6 +62,15 @@
 			return false;
 		});
 
+		
+		function clearForm()
+		{ 
+		    $(':input','#regform')
+		    .not(':button, :submit, :reset')
+		    .val('');  
+		};
+		
+		
 	});
 </script>
 </head>

@@ -1,7 +1,7 @@
 <div data-role="content">
 	<div id="regisdiv">
 	<div id="regerror"></div>
-	<form action="registration" method="post">
+	<form action="registration" method="post" id="regform">
 		Fill in the registration form below and submit!<br> <br>
 		<table width="70%">
 			<tr>

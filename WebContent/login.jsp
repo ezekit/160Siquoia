@@ -13,9 +13,8 @@
 					<td><label for="upass">Password:</label> <input
 						type="password" name="upass" id="upass" value=""
 						placeholder="Password" />
-						<div style="width: 200px">
+						<div style="width: 200px"><br>
 							<input type="submit" value="submit">
-
 						</div></td>
 				</tr>
 			</table>
