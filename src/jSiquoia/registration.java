@@ -31,7 +31,7 @@ public class registration extends HttpServlet {
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String msg;
 
@@ -70,20 +70,20 @@ public class registration extends HttpServlet {
 			//UserDAO (DATA ACCESS OBJECT)  validates the inputs from the GET note * the .registration
 			user = UserDAO.registration(user);
 
+		    PrintWriter pWriter = response.getWriter();  
 			if (user.isValid()) {
 				HttpSession session = request.getSession(true);
 				session.setAttribute("currentSessionUser", user);
-				//response.sendRedirect("errorpage.jsp"); // 
+			    pWriter.println(1);
+			    response.flushBuffer();
 			}
 
 			else
-				; // error page
-			
-			
-			response.setContentType("text/html");
-			PrintWriter out = response.getWriter();
-			out.println("<font color=#fff size=100px>" +msg+"</font>");	
-			
+			{
+
+			   pWriter.println("<p class=err>Registration failed please try again</p>");
+			   response.flushBuffer();
+			}
 			
 		}
 

@@ -1,5 +1,6 @@
 <div data-role="content">
-
+	<div id="regisdiv">
+	<div id="regerror"></div>
 	<form action="registration" method="post">
 		Fill in the registration form below and submit!<br> <br>
 		<table width="70%">
@@ -27,21 +28,11 @@
 					data-mini="true" /></td>
 			</tr>
 			<tr>
-				<td><legend>Agree to the terms:</legend></td>
-				<td width="200">
-					<fieldset data-role="controlgroup" style="width: 200px">
-						<input type="checkbox" name="checkbox-agree" id="checkbox-agree"
-							class="custom" /> <label for="checkbox-agree">I agree</label>
-					</fieldset>
-				</td>
-			</tr>
-			<tr>
 				<td></td>
 				<td>
 					<table width="400">
-						<tr>	
-						*Submit to login						   
-							<td><input type = "submit"> Submit </td>
+						<tr>				   
+							<td><input type = "submit" value="submit" /></td>
 							 <td> </td>
 						</tr>
 					</table>
@@ -50,4 +41,5 @@
 		</table>
 
 	</form>
+	</div>
 </div>

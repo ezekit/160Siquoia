@@ -73,30 +73,7 @@ public class UserDAO {
 
 		// some exception handling
 		finally {
-			if (rs != null) {
-				try {
-					rs.close();
-				} catch (Exception e) {
-				}
-				rs = null;
-			}
-
-			if (stmt != null) {
-				try {
-					stmt.close();
-				} catch (Exception e) {
-				}
-				stmt = null;
-			}
-
-			if (currentCon != null) {
-				try {
-					currentCon.close();
-				} catch (Exception e) {
-				}
-
-				currentCon = null;
-			}
+			err();
 		}
 
 		return bean;
@@ -153,4 +130,39 @@ public class UserDAO {
 	      System.out.println("name:" + name + " Pw:" + pw + " Email:" + em + " tok:" + token + " level:" + acl + " date:" + date); 
 	   }
 	}
+	
+	
+	//error handler just ignore for now
+	private static void err()
+	{
+		
+		if (rs != null) {
+			try {
+				rs.close();
+			} catch (Exception e) {
+			}
+			rs = null;
+		}
+
+		if (stmt != null) {
+			try {
+				stmt.close();
+			} catch (Exception e) {
+			}
+			stmt = null;
+		}
+
+		if (currentCon != null) {
+			try {
+				currentCon.close();
+			} catch (Exception e) {
+			}
+
+			currentCon = null;
+		}
+		
+	}
+	
 }
+
+

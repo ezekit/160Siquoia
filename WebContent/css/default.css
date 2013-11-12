@@ -29,6 +29,12 @@ p.logo {
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+p.err {
+	font-family: 'Goudy Bookletter 1911';
+	font-weight: bold;
+	font-size: 14pt;
+	color: red;
+}
 
 a {
 	font-family: 'Goudy Bookletter 1911';

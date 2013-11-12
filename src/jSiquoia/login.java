@@ -45,11 +45,11 @@ public class login extends HttpServlet {
 
 				HttpSession session = request.getSession(true);
 				session.setAttribute("currentSessionUser", user);
-				response.sendRedirect("userLog.jsp"); // logged-in page
+				response.sendRedirect("loginValid.jsp"); // logged-in page
 			}
 			//Else go to error page
 			else
-				response.sendRedirect("invalidLog.jsp"); // error page
+				response.sendRedirect("loginInvalid.jsp"); // error page
 		}
 
 		catch (Throwable theException) {
