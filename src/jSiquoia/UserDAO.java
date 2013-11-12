@@ -32,7 +32,7 @@ public class UserDAO {
 
 		//A SQL STATEMENT FOR SELECTING A ROW WITH THE VALUE OF THE PASSED PARAMETER (say email = test@test.edu)
 		String searchQuery = "select * from userprofile where email='" + email
-				+ "' AND password='" + password + "'";
+				+ "' AND upassword='" + password + "'";
 		//FOR DEBUGGIN ONLY TO SEE what the hecks happening in ECLIPSE CONSOLE WHEN SUBMITTED
 		System.out.print(searchQuery);
 
