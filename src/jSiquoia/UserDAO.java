@@ -57,7 +57,7 @@ public class UserDAO {
 
 			// if user exists set the isValid variable to true
 			else if (row) {
-				String name = rs.getString("name");
+				String name = rs.getString("uname");
 				String date = rs.getString("login_date");
 
 				System.out.println("Welcome " + name);
