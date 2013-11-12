@@ -31,7 +31,7 @@ public class UserDAO {
 		String email = bean.getEmail();
 
 		//A SQL STATEMENT FOR SELECTING A ROW WITH THE VALUE OF THE PASSED PARAMETER (say email = test@test.edu)
-		String searchQuery = "select * from user where email='" + email
+		String searchQuery = "select * from userprofile where email='" + email
 				+ "' AND password='" + password + "'";
 		//FOR DEBUGGIN ONLY TO SEE what the hecks happening in ECLIPSE CONSOLE WHEN SUBMITTED
 		System.out.print(searchQuery);
@@ -89,13 +89,11 @@ public class UserDAO {
 		String name = bean.getName();
 		String pass = bean.getPassword();
 		String email = bean.getEmail();
-		int token = bean.getToken();
-		int accesslevel = bean.getLevel();
 
 		//SQL - INSERTS values to database user table
-		String sql = "insert into user (name, password, email, token, accesslevel)"
+		String sql = "insert into userprofile (uname, upassword, email)"
 				+ " values('" + name + "','" + pass + "','"
-				+ email + "'," + token + "," + accesslevel + ")";
+				+ email + "')";
 
 		currentCon = ConnectionManager.getConnection();
 		try {

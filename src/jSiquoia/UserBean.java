@@ -9,6 +9,10 @@ public class UserBean implements java.io.Serializable {
 	private String login_date;
 	private int token;
 	private int accesslevel;
+	private int score;
+	private int rank;
+	private String currQset;
+	private int catID;
 	public boolean valid;
 
 	public String getName() {
@@ -59,11 +63,45 @@ public class UserBean implements java.io.Serializable {
 		login_date = newDate;
 	}
 
-	public boolean isValid() {
-		return valid;
+	public int getScore() {
+		return score;
 	}
 
+	public void setScore(int newScore) {
+		score = newScore;
+	}
+	
+	public int  getRank() {
+		return rank;
+	}
+
+	public void setRank(int newRank) {
+		rank = newRank;
+	}
+	
+	public String getCurrQSet() {
+		return currQset;
+	}
+
+	public void setCurrQSet(String newCurrQset) {
+		currQset = newCurrQset;
+	}
+	
+	public String getCatID() {
+		return currQset;
+	}
+
+	public void setCatID(int newCatID) {
+		catID = newCatID;
+	}
+
+
+	//SETS VALIDATION FOR BEAN OBJECT
 	public void setValid(boolean newValid) {
 		valid = newValid;
+	}	
+	
+	public boolean isValid() {
+		return valid;
 	}
 }

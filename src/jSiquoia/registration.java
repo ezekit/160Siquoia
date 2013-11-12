@@ -47,16 +47,7 @@ public class registration extends HttpServlet {
 			UserBean user = new UserBean();
 			//sets each parameter to a value from above
 			user.setName(newusr);
-			user.setEmail(newemail);
-			// default values for user 100 siquoia tokens and level 1 accesslevel
-			// user (0 for DBA) //token and level should be on DATABASE DEFAULT SO WE SHOULDNT
-			// INCLUDE IT HERE BUT DOING SO FOR EXAMPLE... if u dont get what i just said
-			// dont worry just know that this sets the token value to the object userbean java
-			user.setToken(100);
-			user.setLevel(1);
-			//DATE IS SET ON DATABASE MYSQL AUTOMATICALLY USING TRIGGER DONT SET IT HERE
-			
-			
+			user.setEmail(newemail);			
 			//if password doesnt equal confirmation password
 			if(newpw.equals(confirmPw))
 			{
@@ -66,7 +57,16 @@ public class registration extends HttpServlet {
 			else
 				msg = "Password are not the same";	
 			
-
+			/*you might be wondering where do we set the other attributes
+			  token, rank, accesslevel....(except currentQset we'll handle later)...etc..
+			  this is because mysql handles the defaults by itself 
+			  if you dont believe me look at table christina made 
+			  
+			  BTW FOR NOW ACCESSLEVEL which (0) for DBA and (1) for regular user
+			  our default is (1) we can only insert regular user from the webpage
+			  for security reason
+			*/
+			
 			//UserDAO (DATA ACCESS OBJECT)  validates the inputs from the GET note * the .registration
 			user = UserDAO.registration(user);
 
@@ -84,8 +84,6 @@ public class registration extends HttpServlet {
 			   pWriter.println("<p class=err>Registration failed please try again</p>");
 			   response.flushBuffer();
 			}
-			
-			
 			
 		}
 
