@@ -1,3 +1,9 @@
+
+<jsp:include page="header.html" />
+<div data-role="page" data-theme="a">
+<jsp:include page="nav.jsp" />
+<!-- ALWAYS ADD HEADER ABOVE  -->
+
 <div data-role="content">
 	<div id="regisdiv">
 	<div id="regerror"></div>
@@ -43,3 +49,7 @@
 	</form>
 	</div>
 </div>
+
+<!-- ALWAYS DEL FOOTER BELOW -->	
+<jsp:include page="footer.html" />
+

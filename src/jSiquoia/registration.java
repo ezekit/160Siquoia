@@ -8,6 +8,7 @@ import java.util.Date;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -70,19 +71,33 @@ public class registration extends HttpServlet {
 			//UserDAO (DATA ACCESS OBJECT)  validates the inputs from the GET note * the .registration
 			user = UserDAO.registration(user);
 
-		    PrintWriter pWriter = response.getWriter();  
-			if (user.isValid()) {
+			if (user.isValid()) {			
+				
 				HttpSession session = request.getSession(true);
-				session.setAttribute("currentSessionUser", user);
-			    pWriter.println(1);
-			    response.flushBuffer();
+				//binds object to session (String name, Object ob)
+				session.setAttribute("currUser", newemail);
+
+				// setting session to expiry in 30 mins
+				session.setMaxInactiveInterval(30 * 60);
+				
+				/*FOR SESSION COOKIES*/
+				// cookie (String name, String value)
+	            Cookie userName = new Cookie("currUser", newemail);
+	            //Cookie userName = new Cookie("user", user);
+				//age of cookie 30 min
+				userName.setMaxAge(30 * 60);
+				response.addCookie(userName);			
+	   
+	            
+	            //Get the encoded URL string
+	            String encodedURL = response.encodeRedirectURL("account.jsp");
+	            response.sendRedirect(encodedURL);
+				
 			}
 
 			else
 			{
-
-			   pWriter.println("<p class=err>Registration failed please try again</p>");
-			   response.flushBuffer();
+		        response.sendRedirect("index.jsp");
 			}
 			
 		}

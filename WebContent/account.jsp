@@ -1,7 +1,47 @@
 
+<jsp:include page="header.html" />
+<div data-role="page" data-theme="a">
+<jsp:include page="nav.jsp" />
+<!-- ALWAYS ADD HEADER ABOVE  -->
+	
+	
+
 <div data-role="content" data-theme="c">
+	<%
+		//allow access only if session exists
+		String user = null;
+		if (session.getAttribute("currUser") == null) {
+			response.sendRedirect("index.jsp");
+		} else
+			user = (String) session.getAttribute("currUser");
+		String userName = null;
+		String sessionID = null;
+		Cookie[] cookies = request.getCookies();
+		if (cookies != null) {
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals("currUser"))
+					userName = cookie.getValue();
+				if (cookie.getName().equals("JSESSIONID"))
+					sessionID = cookie.getValue();
+			}
+		}
+	%>
+
+	<!-- Your Session ID=< %=sessionID% -->
+	<!-- User=< %=user% -->
+	
+	
+	<div id="logoutdiv"> 
+	<form action="logout">
+		<input type="submit" value="logout" id="logoutbut">
+	</form>
+	</div>
+	
+	
+	
+	<br><br>
 	<div class="bodycontent">
-		<br> <strong>User Account Info:</strong><br>
+		<br> <h3>Logged in <strong><%=userName%></strong> account: </h3><br>
 		<br>
 		<table cellpadding=2 cellspacing=2>
 			<tr>
@@ -54,3 +94,10 @@
 
 	</div>
 </div>
+
+
+
+<!-- ALWAYS DEL FOOTER BELOW -->	
+<jsp:include page="footer.html" />
+
+
