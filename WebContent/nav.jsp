@@ -4,7 +4,8 @@
 	<div data-role="navbar" id="navigation">
 		<ul>
 			<li><a href="index.jsp" data-theme="b"  id="log" rel="internal" data-transition="fade">Login</a></li>
-			<li><a href="#play" data-theme="b" data-rel="popup">Play</a></li>
+			<!-- li><a href="#play" data-theme="b" data-rel="popup">Play</a></li -->
+			<li><a href="play.jsp" data-theme="b" id="reg" rel="internal" data-transition="fade">Play</a></li>
 			<li><a href="account.jsp" data-theme="b" id="reg" rel="internal" data-transition="fade">Account</a></li>
 			<li><a href="#" data-theme="b" data-transition="fade">Store</a></li>
 			<li><a href="#" data-theme="b" id="leaderboard" data-transition="fade">Leaderboard</a></li>
