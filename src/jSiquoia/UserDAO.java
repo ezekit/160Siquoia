@@ -57,11 +57,17 @@ public class UserDAO {
 
 			// if user exists set the isValid variable to true
 			else if (row) {
-				String name = rs.getString("uname");
-				String date = rs.getString("login_date");
+				String dbname = rs.getString("uname");
+				String dbdate = rs.getString("login_date").toString();
+				String dbemail = rs.getString("email"); 
+			    int dbtoken = rs.getInt("token"); 
 
-				System.out.println("Welcome " + name);
-				bean.setName(name);
+				System.out.println("Welcome " + dbname);
+				bean.setName(dbname);
+				bean.setDate(dbdate);
+				bean.setEmail(dbemail);
+				bean.setToken(dbtoken);
+				
 				bean.setValid(true);
 			}
 		}
@@ -93,12 +99,20 @@ public class UserDAO {
 		String sql = "insert into userprofile (uname, upassword, email)"
 				+ " values('" + name + "','" + pass + "','"
 				+ email + "')";
-
+		
+		
 		currentCon = ConnectionManager.getConnection();
 		try {
 			stmt = currentCon.createStatement();
 			stmt.executeUpdate(sql);
 			bean.setValid(true);
+		
+			//TESTING
+			String setTokenDefault = "select token from userprofile where email = " + email ;
+			rs = stmt.executeQuery(setTokenDefault);
+			bean.setToken(rs.getInt("token"));
+			//TESTING
+			
 			//for DEBUGGIN
 			//printResultSetfromStudents(rs);
 			
