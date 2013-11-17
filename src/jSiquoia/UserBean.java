@@ -70,15 +70,15 @@ public class UserBean implements java.io.Serializable {
 	public void setScore(int newScore) {
 		score = newScore;
 	}
-	
-	public int  getRank() {
+
+	public int getRank() {
 		return rank;
 	}
 
 	public void setRank(int newRank) {
 		rank = newRank;
 	}
-	
+
 	public String getCurrQSet() {
 		return currQset;
 	}
@@ -86,7 +86,7 @@ public class UserBean implements java.io.Serializable {
 	public void setCurrQSet(String newCurrQset) {
 		currQset = newCurrQset;
 	}
-	
+
 	public String getCatID() {
 		return currQset;
 	}
@@ -95,12 +95,11 @@ public class UserBean implements java.io.Serializable {
 		catID = newCatID;
 	}
 
-
-	//SETS VALIDATION FOR BEAN OBJECT
+	// SETS VALIDATION FOR BEAN OBJECT
 	public void setValid(boolean newValid) {
 		valid = newValid;
-	}	
-	
+	}
+
 	public boolean isValid() {
 		return valid;
 	}

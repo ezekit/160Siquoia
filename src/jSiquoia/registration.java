@@ -76,7 +76,8 @@ public class registration extends HttpServlet {
 				HttpSession session = request.getSession(true);
 				//binds object to session (String name, Object ob)
 				session.setAttribute("currUser", newemail);
-
+				session.setAttribute("bean", user);
+				
 				// setting session to expiry in 30 mins
 				session.setMaxInactiveInterval(30 * 60);
 				

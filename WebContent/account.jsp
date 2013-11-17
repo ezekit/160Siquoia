@@ -7,13 +7,21 @@
 	
 
 <div data-role="content" data-theme="c">
+	<%@ page import="jSiquoia.UserBean" %>
+	<jsp:useBean id="userbean" class="jSiquoia.UserBean" scope="session"/>
+	<jsp:setProperty name="userbean" property="*"/> 
 	<%
 		//allow access only if session exists
 		String user = null;
 		if (session.getAttribute("currUser") == null) {
 			response.sendRedirect("index.jsp");
 		} else
-			user = (String) session.getAttribute("currUser");
+		
+		{
+		//user = (String) session.getAttribute("currUser");
+		UserBean bean = (UserBean) session.getAttribute("bean");
+		userbean = bean;
+		
 		String userName = null;
 		String sessionID = null;
 		Cookie[] cookies = request.getCookies();
@@ -24,7 +32,10 @@
 				if (cookie.getName().equals("JSESSIONID"))
 					sessionID = cookie.getValue();
 			}
+			}
+
 		}
+		
 	%>
 
 	<!-- Your Session ID=< %=sessionID% -->
@@ -38,11 +49,8 @@
 	</div>
 	
 	
-	
 	<br><br>
 	<div class="bodycontent">
-		<br> <h3>Logged in <strong><%=userName%></strong> account: </h3><br>
-		<br>
 		<table cellpadding=2 cellspacing=2>
 			<tr>
 				<td valign=top><img
@@ -52,27 +60,35 @@
 					<table>
 						<tr>
 							<td><strong>Name:</strong>
-							<td>David Taylor</td>
+							<td><%=userbean.getName()%></td>
 						</tr>
 						<tr>
 							<td><strong>Email:</strong>
-							<td>David.Taylor@sjsu.edu</td>
+							<td><%=userbean.getEmail()%></td>
 						</tr>
 						<tr>
 							<td><strong>About Me:</strong>
 							<td>I despised stupidity</td>
 						</tr>
 						<tr>
-							<td><strong>Total Games Played:</strong>
-							<td>1</td>
+							<td><strong>Login Date:</strong>
+							<td><%=userbean.getDate()%></td>
 						</tr>
 						<tr>
-							<td><strong>Packages bought:</strong>
-							<td>0</td>
+							<td><strong>Total Tokens:</strong>
+							<td><%=userbean.getToken()%></td>
+						</tr>
+						<tr>
+							<td><strong>Level:</strong>
+							<td><%=userbean.getLevel()%></td>
+						</tr>
+						<tr>
+							<td><strong>Score:</strong>
+							<td><%=userbean.getScore()%></td>
 						</tr>
 						<tr>
 							<td><strong>Rank: </strong>
-							<td><h>499/500</h></td>
+							<td><h><%=userbean.getRank()%></h></td>
 						</tr>
 					</table> <input type="button" value=" Click to edit account information " /><br>
 				</td>
